@@ -1,46 +1,55 @@
-export default {
-  enGB : {
-    transGridHeaderName: 'Name',
-    transGridHeaderBrand: 'Brand',
-    transGridHeaderLastDig: 'Last 4 digits',
-    transGridHeaderType: 'Transaction type',
-    transGridHeaderAmount: 'Amount',
-    transGridHeaderCurrency: 'Currency'
-  },
-  esES : {
-    transGridHeaderName: 'Nombre',
-    transGridHeaderBrand: 'Marca',
-    transGridHeaderLastDig: 'Últimos 4 digitos',
-    transGridHeaderType: 'Tipo de transacción',
-    transGridHeaderAmount: 'Monto',
-    transGridHeaderCurrency: 'Moneda'
-  }
-}
-/*
-export default function (lang) {
-  if(!(lang === 'en-GB' || lang === 'es-ES')) {
-    lang = 'en-GB';
-  }
+/**
+ * @description Locales used by the app depending on the browser's current language.
+ **/
 
-  const normalizedLang = lang.replace('-', '');
+export default function (lang) {
+
   const locales = {
-    'enGB' : {
+    enGB: {
       transGridHeaderName: 'Name',
       transGridHeaderBrand: 'Brand',
       transGridHeaderLastDig: 'Last 4 digits',
-      transGridHeaderType: 'Transaction type',
+      transGridHeaderAction: 'Transaction type',
       transGridHeaderAmount: 'Amount',
-      transGridHeaderCurrency: 'Currency'
+      transGridHeaderCurrency: 'Currency',
+      payment: 'Payment',
+      credit: 'Credit',
+      authorize: 'Authorize',
+      searchButtonText: 'Search',
+      currencyLabel: 'Currency',
+      actionTypeLabel: 'Transaction type',
+      extendedInfoId: 'ID:',
+      extendedInfoFirst6Digits: 'First 6 digits:',
+      extendedInfoTrackingCode: 'Tracking code:',
+      extendedInfoExpiryMonth: 'Expiry month:',
+      extendedInfoBrandId: 'Brand ID:',
+      extendedInfoExpiryYear: 'Expiry year:',
+      noFilterTransactionTitle: 'No Transactions',
+      noFilterTransactionText: 'No transactions were found with the selected filters.'
     },
-    'esES' : {
+    esES: {
       transGridHeaderName: 'Nombre',
       transGridHeaderBrand: 'Marca',
       transGridHeaderLastDig: 'Últimos 4 digitos',
-      transGridHeaderType: 'Tipo de transacción',
+      transGridHeaderAction: 'Tipo de transacción',
       transGridHeaderAmount: 'Monto',
-      transGridHeaderCurrency: 'Moneda'
+      transGridHeaderCurrency: 'Moneda',
+      payment: 'Pago',
+      credit: 'Crédito',
+      authorize: 'Autorización',
+      searchButtonText: 'Buscar',
+      currencyLabel: 'Moneda',
+      actionTypeLabel: 'Tipo de transacción',
+      extendedInfoId: 'ID:',
+      extendedInfoFirst6Digits: 'Primeros 6 digitos:',
+      extendedInfoTrackingCode: 'Código de seguimiento:',
+      extendedInfoExpiryMonth: 'Mes cad.:',
+      extendedInfoBrandId: 'ID de marca:',
+      extendedInfoExpiryYear: 'Año cad.:',
+      noFilterTransactionTitle: 'No Hay Transactions',
+      noFilterTransactionText: 'No se encontraron transacciones con los filtros seleccionados.'
     }
   };
 
-  return locales[normalizedLang];
-}*/
+  return locales[lang] || locales.enGB;
+}
