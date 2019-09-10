@@ -43,7 +43,6 @@
           this.isRowSelected = !this.isRowSelected;
           this.selectedRowIndex = this.isRowSelected ? index : null;
         } else {
-          console.log("selectedRowIndex: " + this.selectedRowIndex);
           this.isRowSelected = true;
           this.selectedRowIndex = index;
         }
@@ -80,6 +79,8 @@
 
   .grid-header__item {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 
   .grid-content {
@@ -99,6 +100,10 @@
     padding: 2.5rem 1.5rem;
     border-bottom: .1rem solid #e8ebf3;
     transition: all 500ms;
+  }
+
+  .grid-content__row:hover {
+    background-color: #f6f7fb;
   }
 
   .grid-content__row--selected {
@@ -157,7 +162,6 @@
   }
 
   .extendedInfo__item__value {
-    flex: 0 0 45rem;
     font-size: 1.4rem;
     font-weight: 400;
     color: #4a4a4a;
@@ -189,5 +193,17 @@
 
   .extended-leave-active {
     transition: all .3s ease-out;
+  }
+
+  @media (max-width: 640px) {
+    .extendedInfo {
+      flex-flow: column wrap;
+      justify-content: center;
+    }
+
+    .extendedInfo__item {
+      flex: 0;
+      flex-flow: nowrap;
+    }
   }
 </style>

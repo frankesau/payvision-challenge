@@ -51,7 +51,7 @@
     align-items: center;
     font-weight: 600;
     font-size: 1.4rem;
-    border-radius: .1rem;
+    border-radius: .2rem;
     line-height: 1.5;
     text-align: center;
     padding: .8rem 2rem;

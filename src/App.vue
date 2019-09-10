@@ -79,7 +79,6 @@
       },
 
       transactionsReceived(result) {
-        console.log("Transactions Received ", result);
         this.filterTransactionError = false;
         this.gridTransactions = result.data;
         this.setTransactionsGrid();
@@ -89,7 +88,6 @@
        * @description Format data for the grid component.
        **/
       formatTransactionsData(transactions) {
-        console.log("Format Transactions Data");
         let i = 0;
         let iMax = transactions.length;
         let data = [];
@@ -124,7 +122,6 @@
         return data;
       },
       setTransactionsGrid() {
-        console.log("Set Transactions ");
         let headers = [
           util.getLocale("transGridHeaderName"),
           util.getLocale("transGridHeaderBrand"),
