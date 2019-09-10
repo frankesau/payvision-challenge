@@ -1,6 +1,17 @@
 # Frontend Software Engineer - Rendering Transactions
 
-## Project setup
+## Using Docker
+```
+docker run --name pv_challenge -p 8888:8080 -d fromana/pv_challenge
+```
+
+## Using Source Code
+###Project source links
+```
+https://github.com/frankesau/payvision-challenge.git
+https://drive.google.com/open?id=1nYpKrJtG87M2QxEt87edjZewHtWPq5z-
+```
+### Project setup
 ```
 npm install
 ```
